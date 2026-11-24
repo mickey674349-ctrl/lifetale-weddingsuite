@@ -1,0 +1,6 @@
+{
+  "name": "LifeTale 婚禮視覺套版師｜WeddingSuite",
+  "description": "Every Life Has a Story · 一鍵生成專屬於你們的精品婚禮視覺，即時預覽手機電子喜帖、迎賓海報與賓客桌卡。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --atelier-rose: #C29B92;
+  --atelier-blush: #E8D0CA;
+  --atelier-mauve: #B58B83;
+  --atelier-gold: #C8AA7B;
+  --atelier-ivory: #FAF3EF;
+  --atelier-cocoa: #70534C;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FAF3EF;
+    color: #70534C;
+    font-family: 'Plus Jakarta Sans', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.font-editorial-serif {
+  font-family: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
+}
+
+.font-editorial-sans {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+}
+
+.font-oriental-serif {
+  font-family: 'Noto Serif TC', 'Cormorant Garamond', serif;
+}
+
+.font-script {
+  font-family: 'Pinyon Script', 'Cormorant Garamond', cursive;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle cotton matte paper texture for bespoke stationery cards */
+.atelier-paper-texture {
+  background-image:
+    radial-gradient(rgba(101, 80, 71, 0.035) 0.5px, transparent 0.5px),
+    radial-gradient(rgba(197, 170, 124, 0.04) 0.5px, transparent 0.5px);
+  background-size: 18px 18px;
+  background-position: 0 0, 9px 9px;
+}
+
+/* Soft pearl white marble stage surface behind live stationery previews */
+.atelier-marble-stage {
+  background-color: #F7F4F0;
+  background-image:
+    radial-gradient(ellipse at 18% 15%, rgba(230, 203, 195, 0.24), transparent 55%),
+    radial-gradient(ellipse at 85% 82%, rgba(197, 170, 124, 0.16), transparent 52%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(245, 240, 233, 0.55) 48%, rgba(255, 255, 255, 0.65) 100%);
+}
+
+/* Realistic luxury cotton stationery paper shadow */
+.stationery-shadow {
+  box-shadow:
+    0 24px 48px -18px rgba(101, 80, 71, 0.18),
+    0 8px 18px -8px rgba(101, 80, 71, 0.1),
+    0 1px 2px rgba(101, 80, 71, 0.06);
+}
+
+/* Subtle champagne foil shimmer text effect (digital visual only) */
+.champagne-foil-text {
+  background: linear-gradient(120deg, #A98E60 0%, #D4BC8E 45%, #B59767 75%, #C5AA7C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes gentle-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+.animate-gentle-shake {
+  animation: gentle-shake 0.36s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
